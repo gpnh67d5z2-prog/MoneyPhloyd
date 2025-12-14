@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyPhloyd - Конвертер валют</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='70' font-size='80' text-anchor='middle'>🪙</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MoneyPhloyd</h1>
+        <p class="subtitle">Конвертер валют в реальном времени</p>
+        
+        <div class="converter-box">
+            <div class="input-group">
+                <label for="amount">Сумма:</label>
+                <input type="number" id="amount" value="1" min="0">
+            </div>
+            
+            <div class="currency-group">
+                <div class="currency-item">
+                    <label for="from-currency">Из:</label>
+                    <select id="from-currency">
+                        <option value="USD">USD - Доллар</option>
+                        <option value="EUR">EUR - Евро</option>
+                        <option value="GBP">GBP - Фунт</option>
+                        <option value="JPY">JPY - Иена</option>
+                        <option value="RUB">RUB - Рубль</option>
+                        <option value="CNY">CNY - Юань</option>
+                        <option value="INR">INR - Рупия</option>
+                        <option value="AUD">AUD - Австралийский доллар</option>
+                    </select>
+                </div>
+                
+                <button id="swap-btn" class="swap-btn">⇄</button>
+                
+                <div class="currency-item">
+                    <label for="to-currency">В:</label>
+                    <select id="to-currency">
+                        <option value="USD">USD - Доллар</option>
+                        <option value="EUR" selected>EUR - Евро</option>
+                        <option value="GBP">GBP - Фунт</option>
+                        <option value="JPY">JPY - Иена</option>
+                        <option value="RUB">RUB - Рубль</option>
+                        <option value="CNY">CNY - Юань</option>
+                        <option value="INR">INR - Рупия</option>
+                        <option value="AUD">AUD - Австралийский доллар</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="result-box">
+                <p id="result" class="result-text">Результат</p>
+                <p id="exchange-rate" class="exchange-rate"></p>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="convert-btn" class="btn">Конвертировать</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
